@@ -28,7 +28,7 @@ Point 7
 
 8. 🧹 Tackled cleaning up of Redshift resources after, which we’d never do in production (unless we want to risk deleting everything we worked so hard to build—yikes!).
 
-9. 🤖 Built [Infrastructure & Analytics Script.ipynb](https://github.com/trishh088/Data-Engineering-With-AWS/blob/main/Cloud%20Data%20Warehouses/Infrastructure%20%26%20Analytics%20Script.ipynb), which runs all the code sequentially from setting up te role, Redshift cluster, the create and etl scripts, few analytical insights generated from the loaded data, and of course deleting the Redshift cluster post analysis (saved this to run last to avoid any massive Redshift bill!).
+9. 🤖 Built [Infrastructure & Analytics Script.ipynb](https://github.com/trishh088/Data-Engineering-With-AWS/blob/main/Cloud%20Data%20Warehouses/Infrastructure%20%26%20Analytics%20Script.ipynb), which runs all the code sequentially from setting up te role, Redshift cluster, the create and ETL scripts, few analytical insights generated from the loaded data, and of course deleting the Redshift cluster post analysis (saved this to run last to avoid any massive Redshift bill!).
 
 10. 📜 Finally, put together this README because good documentation is crucial. My mantra - never skip this step—it only creates chaos later. Been there, done that, never again!
 
@@ -71,8 +71,7 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
 Please refer the notebook for this - [Infrastructure & Analytics Script.ipynb](https://github.com/trishh088/Data-Engineering-With-AWS/blob/main/Cloud%20Data%20Warehouses/Infrastructure%20%26%20Analytics%20Script.ipynb)
 
 ## Challenges faced:
-1. Setting up security for role creation of Redshift cluster.
-2. Making sure to not go over budget when using AWS credits to build this project which mimics real life scenrios where i have been tasked to solve a challenge without overshotting a budget or helping showcase our capabilities when I am helping out with business development for my company.
+Making sure to not go over budget when using AWS credits to build this project which mimics real life scenarios where I have been tasked to solve a challenge without overshotting a budget or helping showcase our capabilities when I am helping out with business development for my company.
 ## References:
 1. Thierry Bertin-Mahieux, Daniel P.W. Ellis, Brian Whitman, and Paul Lamere. 
 The Million Song Dataset. In Proceedings of the 12th International Society
