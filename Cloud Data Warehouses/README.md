@@ -19,20 +19,18 @@ This project, part of the Udacity Data Engineer Nanodegree, demonstrates creatin
 
 4. 🛠️ Created sql_queries.py to write the DROP, CREATE, staging, fact, and dimension tables for the STAR schema. This script feeds into create_table.py, where we end up creating the star schema in Redshift.
 
-5. 🤖 Built business_intelligence_bot.py, loaded with sample queries for data insights (saved this to run last to avoid any massive Redshift bill!).
+5. 🔒 Set up an IAM role with just the right permissions to create a Redshift cluster on AWS, following best practices of limited access and using generated access keys for our scripts.
 
-6. 🔒 Set up an IAM role with just the right permissions to create a Redshift cluster on AWS, following best practices of limited access and using generated access keys for our scripts.
+6. 🧱 Used Infrastructure as Code (IaC) to create the roles and Redshift cluster just before the ETL step, minimizing unnecessary cloud expenses by keeping the cluster live only when needed.
+Point 7
 
-7. 🧱 Used Infrastructure as Code (IaC) to create the roles and Redshift cluster just before the ETL step, minimizing unnecessary cloud expenses by keeping the cluster live only when needed.
-Point 8
+7. 🚀 Tackled etl.py, the script that loads data from S3 into staging tables on Redshift, then transforms it into our analytics tables.
 
-8. 🚀 Tackled etl.py, the script that loads data from S3 into staging tables on Redshift, then transforms it into our analytics tables.
+8. 🧹 Tackled cleaning up of Redshift resources after, which we’d never do in production (unless we want to risk deleting everything we worked so hard to build—yikes!).
 
-9. 📊 Ran business_intelligence_bot.py to gather insights (see results below)!
+9. 🤖 Built [Infrastructure & Analytics Script.ipynb](https://github.com/trishh088/Data-Engineering-With-AWS/blob/main/Cloud%20Data%20Warehouses/Infrastructure%20%26%20Analytics%20Script.ipynb), which runs all the code sequentially from setting up te role, Redshift cluster, the create and etl scripts, few analytical insights generated from the loaded data, and of course deleting the Redshift cluster post analysis (saved this to run last to avoid any massive Redshift bill!).
 
-10. 🧹 Cleaned up resources after, which we’d never do in production (unless we want to risk deleting everything we worked so hard to build—yikes!).
-
-11. 📜 Finally, put together this README because good documentation is crucial. My mantra - never skip this step—it only creates chaos later. Been there, done that, never again!
+10. 📜 Finally, put together this README because good documentation is crucial. My mantra - never skip this step—it only creates chaos later. Been there, done that, never again!
 
 ## Where Sparkify's Data Gets Its Groove On!" 🎶
 
