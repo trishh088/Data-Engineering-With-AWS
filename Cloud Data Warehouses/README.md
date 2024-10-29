@@ -5,7 +5,7 @@ A music streaming startup, Sparkify, has grown their user base and song database
 
 As their data engineer, I am building an ETL pipeline that extracts their data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for their analytics team to continue finding insights into what songs their users are listening to.
 
-![System Architecture for AWS S3 to Redshift ETL](image.png "System Architecture for AWS S3 to Redshift ETL")
+![System Architecture for AWS S3 to Redshift ETL](images/image.png "System Architecture for AWS S3 to Redshift ETL")
 *System Architecture for AWS S3 to Redshift ETL* 
 
 This project, part of the Udacity Data Engineer Nanodegree, demonstrates creating a well-architected data warehouse, utilizing staging tables for data independence, and achieving high compute performance through bulk data loads from S3 to the Sparkify DWH in Redshift.
