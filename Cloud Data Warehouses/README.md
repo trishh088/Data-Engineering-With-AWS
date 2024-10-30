@@ -72,6 +72,16 @@ Please refer the notebook for this - [Infrastructure & Analytics Script.ipynb](h
 
 ## Challenges faced:
 Making sure to not go over budget when using AWS credits to build this project which mimics real life scenarios where I have been tasked to solve a challenge without overshotting a budget or helping showcase our capabilities when I am helping out with business development for my company.
+
+## Tools and Technologies used:
+- AWS data platform tools:  
+  - Simple Storage Service (S3)
+  - AWS Redshift
+  - AWS SDK for Python (Boto3)
+- Python
+- Postgres
+
+
 ## References:
 1. Thierry Bertin-Mahieux, Daniel P.W. Ellis, Brian Whitman, and Paul Lamere. 
 The Million Song Dataset. In Proceedings of the 12th International Society
