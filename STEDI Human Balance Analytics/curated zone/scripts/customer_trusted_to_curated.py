@@ -31,7 +31,7 @@ accelerometer_trusted_node1731811414811 = glueContext.create_dynamic_frame.from_
 
 # Script generated for node SQL Query
 SqlQuery0 = '''
-select c.* from customer_trusted c
+select distinct c.* from customer_trusted c
 join accelerometer_trusted a on a.user=c.email
 '''
 SQLQuery_node1731811495750 = sparkSqlQuery(glueContext, query = SqlQuery0, mapping = {"accelerometer_trusted":accelerometer_trusted_node1731811414811, "customer_trusted":customer_trusted_node1731811357535}, transformation_ctx = "SQLQuery_node1731811495750")
@@ -55,15 +55,9 @@ def hashDf(df, keys):
 
 DetectSensitiveData_node1731811780439 = hashDf(SQLQuery_node1731811495750, list(classified_map.keys()))
 
-# Script generated for node SQL Query distinct
-SqlQuery1 = '''
-select distinct * from myDataSource
-'''
-SQLQuerydistinct_node1731863088325 = sparkSqlQuery(glueContext, query = SqlQuery1, mapping = {"myDataSource":DetectSensitiveData_node1731811780439}, transformation_ctx = "SQLQuerydistinct_node1731863088325")
-
 # Script generated for node Amazon S3
 AmazonS3_node1731811833828 = glueContext.getSink(path="s3://stedi-datalake/customer/curated/", connection_type="s3", updateBehavior="UPDATE_IN_DATABASE", partitionKeys=[], enableUpdateCatalog=True, transformation_ctx="AmazonS3_node1731811833828")
 AmazonS3_node1731811833828.setCatalogInfo(catalogDatabase="stedi",catalogTableName="customer_curated")
 AmazonS3_node1731811833828.setFormat("json")
-AmazonS3_node1731811833828.writeFrame(SQLQuerydistinct_node1731863088325)
+AmazonS3_node1731811833828.writeFrame(DetectSensitiveData_node1731811780439)
 job.commit()

@@ -28,7 +28,7 @@ accelerometer_landing_node1731804311748 = glueContext.create_dynamic_frame.from_
 SqlQuery0 = '''
 select a.* from accelerometer_landing a
 join customer_landing c on a.user = c.email
-where a.timestamp >= c.sharewithresearchasofdate
+-- where a.timestamp >= c.sharewithresearchasofdate
 '''
 SQLQuery_node1731804349776 = sparkSqlQuery(glueContext, query = SqlQuery0, mapping = {"customer_landing":customer_trusted_node1731804257438, "accelerometer_landing":accelerometer_landing_node1731804311748}, transformation_ctx = "SQLQuery_node1731804349776")
 
